@@ -1,0 +1,37 @@
+// Java code for linearly searching target in numbers[]. 
+// If target is present then return its location, otherwise return -1
+
+class LinearSearch {
+
+    // This function returns index of element target in numbers[]
+    static int findIndex(int numbers[], int length, int target) {
+        // Traverse through the array
+        for (int position = 0; position < length; position++) {
+            // Return the index if the element is found
+            if (numbers[position] == target) {
+                return position; // Element found
+            }
+        }
+        // Return -1 if the element is not found
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        // Declaring and initializing the array
+        int numbers[] = {3, 4, 1, 7, 5};
+        int length = numbers.length; // Length of the array
+        int target = 4; // Element to search for
+
+        // Calling the findIndex function
+        int position = findIndex(numbers, length, target);
+
+        // Output the result based on the return value of findIndex function
+        if (position == -1) {
+            System.out.println("Element is not present in the array");
+        } else {
+            System.out.println("Element found at position " + position);
+        }
+    }
+}
+
+// --- Commented and updated by Rahaf Alzhrani / Id: 44410410
